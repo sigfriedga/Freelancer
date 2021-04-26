@@ -18,7 +18,6 @@ body{/* 1rem = 10px*/
 .heading__title{
     text-align: center;
     font-size: 3.8rem;
-    font-weight: 400; 
 }
 
 .heading__title span{
@@ -33,4 +32,38 @@ body{/* 1rem = 10px*/
 .nav__bg{
     background-color: var(--secondary);
 }
+
+.nav__primary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .nav__primary{
+        flex-direction: row;
+        flex-direction: center;
+    }
+}
+
+.nav__primary a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav__primary a:hover{
+    background-color: var(--primary);
+    color: var(--darck) ;
+}
+
+
+@media (min-width: 768) {
+    
+}
+
+
+
 
