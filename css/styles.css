@@ -4,20 +4,35 @@
     --grey:#757575;
     --primary:#ffc107;
     --secondary:#0097a7;
-    
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 62.5%;/**/
+    box-sizing: border-box;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body{/* 1rem = 10px*/
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
 
-.heading__title{
-    text-align: center;
+h1{
     font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
 }
 
 .heading__title span{
@@ -28,6 +43,26 @@ body{/* 1rem = 10px*/
     width: 120rem;
     margin: 0 auto;
 }
+/***************************BUTTONS************************/
+.btn{
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .btn{
+        width: auto;
+    }
+}
 
 .nav__bg{
     background-color: var(--secondary);
@@ -36,13 +71,12 @@ body{/* 1rem = 10px*/
 .nav__primary{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 @media (min-width: 768px) {
     .nav__primary{
         flex-direction: row;
-        flex-direction: center;
+        justify-content: space-between;
     }
 }
 
@@ -58,12 +92,36 @@ body{/* 1rem = 10px*/
     background-color: var(--primary);
     color: var(--darck) ;
 }
-
-
-@media (min-width: 768) {
-    
+/***************************HERO************************/
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    position: relative;
 }
 
+.content__hero{
+    position: absolute;
+    background-color: rgba(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__hero h2,
+.content__hero p{
+    color: var(--white);
+}
+
+.location{
+    display: flex;
+    align-items: flex-end;
+}
 
 
 
